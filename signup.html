@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIGNUP PAGE</title>
+<style>
+body
+{
+background-image:url("3.png");
+background-repeat:no-repeat;
+background-size:cover;
+}
+td
+{
+padding: 15px;
+font-size: 30px;
+color:white;
+font-family:cursive;
+}
+input[type=text]
+{
+width:100%;
+padding:20px;
+border-radius:30px;
+}
+input[type=password]
+{
+width:100%;
+padding:20px;
+border-radius:30px;
+}
+input[type=date]
+{
+width:100%;
+padding:20px;
+border-radius:30px;
+}
+select,textarea
+{
+padding:20px;
+border-radius:30px;
+background-color:white;
+font-size:10px;
+font-family:cursive;
+width:100%
+}
+input[type=submit]
+{
+padding:20px;
+border-radius:30px;
+background-color:white;
+font-size:10px;
+font-family:cursive;
+float:right;
+width:30%;
+}
+</style>
+</head>
+<body>
+<form action="next.asp" name="myForm" onsubmit="return(validate())" method="post">
+<table width="50%:>
+<tr>
+<td>First name:</td>
+<td><input type="text"name="first name"placeholder="your name.."id="i"></td>
+</tr>
+<tr>
+<td>First name:</td>
+<td><input type="text"name="first name"placeholder="your name.."id="1"></td>
+</tr>
+<tr>
+<td>last name:</td>
+<td><input type="text"name="lastname"placeholder="your last  name.."id="1"></td>
+</tr>
+<tr>
+<td>gender</td>
+<td>
+<input type="radio"name="gender"value="male"checked>male<br>
+<input type="radio"name="gender"value="female"checked>female<br>
+</td>
+</tr>
+<tr>
+<td>DOB:</td>
+<td><input type="date"name="DOB"placeholder="format(dd-mm-yyyy)"id="i"></td>
+</tr>
+<tr>
+<td>MOBILE NUMBER:</td>
+<td><input type="text"name="mobile number"placeholder="enter your mobilenumber"id="2"></td>
+</tr>
+<tr>
+<td>EMAIL ID:</td>
+<td><input type="text"name="mail id"placeholder="enter your email id.."id="7"></td>
+</tr>
+<tr>
+<td>PASSWORD:</td>
+<td><input type="password"name="password"placeholder="enter new password.."id="3"></td>
+</tr>
+<tr>
+<td>RETYPE PASSWORD:</td>
+<td><input type="password"name="password"placeholder="enter same password.."id="4"></td>
+</tr>
+<tr> <td>
+Zip Code: <input type="text" id="5">  <br>
+Country: 
+<select name="Country" id="6">
+<option value="-1">Select your country</option>
+<option value="1">USA</option>
+<option value="2">UK</option>
+<option value="3">INDIA</option>
+</select>    <br>
+</td>
+</tr>
+<tr>
+<td><input type="submit" value="Submit"></td>
+<td><button><a href="homepage.html"target="_blank"style="text-decoration:none;color:black;" >HOME</a></button>
+<td><button><a href="homepage.html"target="_blank"style="text-decoration:none;color:black;" >CREATE ACCOUNT</a></button></td>
+</tr>
+</table>
+</form>
+<script>
+  function validate()
+ {
+if( document.getElementById("1").value=="" )
+         {
+          alert( "Please provide your name!" );
+          document.getElementById("1").focus() ;
+          return false; 
+          }
+
+ a=document.getElementById("2").value 
+ if(a == "" || a.length != 10 || isNaN(a)  )
+         {
+alert( "Please provide valid phone number" );
+ document.getElementById("2").focus() ;
+ return false;  }
+
+a= document.getElementById("3").value
+b=document.getElementById("4").value
+if( a== "" ||  a !=b )
+         {
+  alert( "Please enter same password" );
+  document.getElementById("4").focus() ;
+   return false;   }
+x=document.getElementById("5").value
+if(x=="" || isNaN(x) || x.length!=6)
+         {
+        alert( "Please enter valid zip code" );
+       document.getElementById("5").focus() ;
+        return false;  }
+
+if(document.getElementById("6").value=="-1")
+         {
+            alert( "Please select your country" );
+            return false; }
+
+    x=document.getElementById("7").value
+         atpos = x.indexOf("@");
+         dotpos = x.indexOf(".");
+         dotposLast = x.lastIndexOf(".");
+if (x==""||atpos==0 || dotpos<=atpos+2 || dotposLast+2>=x.length) 
+{ alert( "Please provide Correct Email ID!" );
+    document.getElementById("7").focus() ;
+     return false;  }
+
+return(true);      
+}
+</script>
+</body>
+</html>

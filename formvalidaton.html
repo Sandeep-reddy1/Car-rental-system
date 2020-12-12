@@ -1,0 +1,74 @@
+<html>
+<head> <title>Form Validation</title>
+ </head>
+   <body>
+<form action="next.asp" name="myForm" onsubmit="return(validate())" method="post">
+
+Name: <input type="text" name="Name" id="1"> <br>
+Contact No: <input type="text" name="contact" id="2">  <br>
+Password: <input type="password" name="pass" id="3">  <br>
+Re-Type Password: <input type="password" name="pass" id="4">  <br>
+Zip Code: <input type="text" id="5">  <br>
+
+Country: 
+<select name="Country" id="6">
+<option value="-1">Select your country</option>
+<option value="1">USA</option>
+<option value="2">UK</option>
+<option value="3">INDIA</option>
+</select>    <br>
+EMail: <input type="text" name="EMail" id="7">  <br>
+<input type="submit" value="Submit">
+</form>
+
+<script>
+  function validate()
+ {
+if( document.getElementById("1").value=="" )
+         {
+          alert( "Please provide your name!" );
+          document.getElementById("1").focus() ;
+          return false; 
+          }
+
+ a=document.getElementById("2").value 
+ if(a == "" || a.length != 10 || isNaN(a)  )
+         {
+alert( "Please provide valid phone number" );
+ document.getElementById("2").focus() ;
+ return false;  }
+
+a= document.getElementById("3").value
+b=document.getElementById("4").value
+if( a== "" ||  a !=b )
+         {
+  alert( "Please enter same password" );
+  document.getElementById("4").focus() ;
+   return false;   }
+x=document.getElementById("5").value
+if(x=="" || isNaN(x) || x.length!=6)
+         {
+        alert( "Please enter valid zip code" );
+       document.getElementById("5").focus() ;
+        return false;  }
+
+if(document.getElementById("6").value=="-1")
+         {
+            alert( "Please select your country" );
+            return false; }
+
+    x=document.getElementById("7").value
+         atpos = x.indexOf("@");
+         dotpos = x.indexOf(".");
+         dotposLast = x.lastIndexOf(".");
+if (x==""||atpos==0 || dotpos<=atpos+2 || dotposLast+2>=x.length) 
+{ alert( "Please provide Correct Email ID!" );
+    document.getElementById("7").focus() ;
+     return false;  }
+
+return(true);      
+}
+</script></body></html>
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BOOKING DETAILS</title>
+<style>
+body{
+background-image:url(background.png);
+background-size: cover;
+background-position: center;
+background-repeat:no-repeat;
+}
+td
+{
+padding: 15px;
+font-size: 30px;
+color:white;
+font-family:cursive;
+}
+input[type=text]
+{
+width:100%;
+padding:20px;
+border-radius:30px;
+}
+select,textarea
+{
+padding:20px;
+border-radius:30px;
+background-color:white;
+font-size:10px;
+font-family:cursive;
+width:100%
+}
+input[type=submit]
+{
+padding:20px;
+border-radius:30px;
+background-color:white;
+font-size:10px;
+font-family:cursive;
+float:right;
+width:30%;
+]
+</style>
+</head>
+<body>
+<form action="next.asp" name="myForm" onsubmit="return(validate())" method="post">
+<table width="50%:>
+<tr>
+<td>Firstname:</td>
+<td><input type="text"placeholder=" Enter your firstname.."id="i"></td>
+</tr>
+<tr>
+<td>Name:</td>
+<td><input type="text"placeholder=" Enter your name.."id="1"></td>
+</tr>
+<tr>
+<td>MOBILE NUMBER:</td>
+<td><input type="text"placeholder=" Enter your 10 digit mobile number"id="2"></td>
+</tr>
+<tr>
+<td>DRIVING:</td>
+<td>
+<input type="radio"name="car"value="SD"checked>SELF DRIVE<br>
+<input type="radio"name="car"value="D"checked>DRIVER<br>
+</td>
+</tr>
+<td>No of PASSENGERS:</td>
+<td>
+<input type="radio"name="a"value="g"checked>1<br>
+<input type="radio"name="a"value="h"checked>2<br>
+<input type="radio"name="a"value="i"checked>3<br>
+<input type="radio"name="a"value="j"checked>4<br>
+<input type="radio"name="a"value="k"checked>5<br>
+<input type="radio"name="a"value="l"checked>6<br>
+</td>
+</tr>
+<tr>
+<td>CAR TYPE:</td>
+<td>
+<input type="radio"name="car type"value="GL"checked>GEAR LESS<br>
+<input type="radio"name="car type"value="G"checked>GEAR<br>
+</td>
+</tr>
+<tr>
+<td>PICK UP DATE:</td>
+<td><input type="date"name="s date"placeholder="format(DD-MM-YYYY)"id="i"></td><br>
+</tr>
+<tr>
+<td>PICK UP TIME<input type="time"placeholder="START TIME(HRS-MINS-am/pm)"cols="5" rows="1"></textarea></td>
+<tr>
+<td>DROP OFF DATE:</td>
+<td><input type="date"name="E date"placeholder="Format(DD-MM-YYYY)"id="i"></td><br>
+</tr>
+<tr>
+<td>DROP OFF TIME<input type="time"placeholder="END TIME(HRS-MINS-am/pm)"cols="5" rows="1"></textarea></td>
+<tr>
+<td></td>
+<td><button><a href="car selection.html"target="_blank"style="text-decoration:none;color:black;" >CONTINUE BOOKING</a></button>
+</td>
+<td><button>reset</button></td>
+<td><button><a href="homepage.html"target="_blank"style="text-decoration:none;color:black;" >HOME</a></button>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
